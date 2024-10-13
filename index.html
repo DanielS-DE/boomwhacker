@@ -3,26 +3,31 @@
   <head>
     <title>MP3-Player</title>
     <style>
+      body {
+        display: flex;
+        flex-wrap: wrap; /* Ermöglicht das Umbrechen der Buttons */
+        justify-content: center; /* Zentriert die Buttons horizontal */
+        gap: 10px; /* Abstand zwischen den Buttons */
+      }
+
       button {
         background-color: blue;
         color: white;
         border: none;
-        padding: 15px; /* Gleicher Wert für vertikalen und horizontalen Abstand */
+        padding: 15px;
         text-align: center;
         text-decoration: none;
-        display: inline-block;
         font-size: 16px;
-        margin: 4px 2px;
         cursor: pointer;
-        width: 45vw; /* Breite auf 45% der Viewport-Breite setzen */
-        height: 45vw; /* Höhe auf 45% der Viewport-Breite setzen */
+        width: 45vw;
+        height: 45vw;
       }
 
       @media (max-width: 600px) {
         button {
-          width: 90vw; /* Breite auf 90% der Viewport-Breite setzen */
-          height: 90vw; /* Höhe auf 90% der Viewport-Breite setzen */
-          font-size: 12px; /* Schriftgröße verkleinern */
+          width: 90vw;
+          height: 90vw;
+          font-size: 12px;
         }
       }
     </style>
