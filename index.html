@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boomwhacker</title>
+    <title>MP3-Player</title>
+    <style>
+      button {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hallo!</h1>
-    <h2>Test test Laura Test</h2>
+    <audio id="myAudio1" src="first.mp3"></audio>
+    <audio id="myAudio2" src="second.mp3"></audio>
+
+    <button onclick="playAudio1()">Sound 1 abspielen</button>
+    <button onclick="playAudio2()">Sound 2 abspielen</button>
+
+    <script>
+      var audio1 = document.getElementById("myAudio1");
+      var audio2 = document.getElementById("myAudio2");
+
+      function playAudio1() {
+        audio1.play();
+      }
+
+      function playAudio2() {
+        audio2.play();
+      }
+    </script>
   </body>
 </html>
