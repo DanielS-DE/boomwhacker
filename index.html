@@ -7,13 +7,23 @@
         background-color: blue;
         color: white;
         border: none;
-        padding: 10px 20px;
+        padding: 15px; /* Gleicher Wert für vertikalen und horizontalen Abstand */
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
+        width: 45vw; /* Breite auf 45% der Viewport-Breite setzen */
+        height: 45vw; /* Höhe auf 45% der Viewport-Breite setzen */
+      }
+
+      @media (max-width: 600px) {
+        button {
+          width: 90vw; /* Breite auf 90% der Viewport-Breite setzen */
+          height: 90vw; /* Höhe auf 90% der Viewport-Breite setzen */
+          font-size: 12px; /* Schriftgröße verkleinern */
+        }
       }
     </style>
   </head>
