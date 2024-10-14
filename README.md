@@ -1,6 +1,8 @@
 # Boomwhacker Soundboard
 
-Dieses Projekt ist eine einfache statische Website, die für den Unterricht erstellt wurde. Mit ihr können Kinder über farbige Buttons die passenden Boomwhacker-Sounds anhören.
+Dieses Projekt ist eine einfache statische Website, die speziell für den Einsatz im **Sonderpädagogik Unterricht** erstellt wurde. Die Website ermöglicht es Kindern mit verschiedenen Behinderungen, über farbige Buttons die passenden Boomwhacker-Sounds anzuhören.
+
+**Barrierefreiheit und eine simple Gestaltung** wurden bei der Entwicklung besonders berücksichtigt, um allen Kindern eine einfache und intuitive Bedienung zu ermöglichen.
 
 ## Funktionen
 
