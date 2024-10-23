@@ -24,7 +24,7 @@ Das Projekt kann auf verschiedene Arten genutzt werden:
 - **GitHub Pages:** Die Webseite kann direkt über GitHub Pages aufgerufen werden (Link zur Webseite einfügen).
 - **Klonen:** Das Projekt kann geklont und lokal ausgeführt werden:
   ```bash
-  git clone [ungültige URL entfernt]
+  git clone https://github.com/DanielS-DE/boomwhacker.git
   ```
 
 ## Lizenz
