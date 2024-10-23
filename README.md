@@ -1,28 +1,32 @@
 # Boomwhacker Soundboard
 
-Dieses Projekt ist eine einfache statische Website, die speziell für den Einsatz im **Sonderpädagogik Unterricht** erstellt wurde. Die Website ermöglicht es Kindern mit verschiedenen Behinderungen, über farbige Buttons die passenden Boomwhacker-Sounds anzuhören.
+Dieses Projekt ist eine einfache Webseite, die als Soundboard für Boomwhacker dient. Sie wurde speziell für den Einsatz im Sonderpädagogik Unterricht einer Grundschulklasse entwickelt und berücksichtigt die Bedürfnisse von Kindern mit verschiedenen Behinderungen.
 
-**Barrierefreiheit und eine simple Gestaltung** wurden bei der Entwicklung besonders berücksichtigt, um allen Kindern eine einfache und intuitive Bedienung zu ermöglichen.
+## Funktionsweise
 
-## Funktionen
-
-- Farbige Buttons, die den Farben der Boomwhacker entsprechen.
-- Beim Klicken auf einen Button wird der entsprechende Boomwhacker-Sound abgespielt.
-- Einfache und intuitive Bedienung, ideal für Kinder.
+Die Webseite zeigt Buttons in den Farben der Boomwhacker an. Beim Klicken auf einen Button wird der entsprechende Ton abgespielt.
 
 ## Technologien
 
 - HTML
 - CSS
 - JavaScript
-- Bootstrap (für das Layout und die Gestaltung der Buttons)
+- Bootstrap
 
-## Verwendung
+## Service Worker
 
-1. Klone das Repository: `git clone https://github.com/DanielS-DE/boomwhacker`
-2. Öffne die Datei `index.html` in einem Webbrowser.
-3. Klicke auf die Buttons, um die Boomwhacker-Sounds abzuspielen.
+Da in der Schule nicht immer eine stabile WLAN-Verbindung gewährleistet werden kann, nutzt die Webseite einen Service Worker. Dadurch werden die Sounddateien im Browser-Cache gespeichert und können auch offline abgespielt werden.
+
+## Nutzung
+
+Das Projekt kann auf verschiedene Arten genutzt werden:
+
+- **GitHub Pages:** Die Webseite kann direkt über GitHub Pages aufgerufen werden (Link zur Webseite einfügen).
+- **Klonen:** Das Projekt kann geklont und lokal ausgeführt werden:
+  ```bash
+  git clone [ungültige URL entfernt]
+  ```
 
 ## Lizenz
 
-Dieses Projekt ist gemeinfrei. Du kannst es frei verwenden, verändern und weitergeben, ohne auf dieses Projekt oder den Autor zu verweisen.
+Dieses Projekt ist **ohne Lizenz** veröffentlicht. Jeder darf es frei nutzen, verändern und weitergeben, ohne den Autor nennen zu müssen.

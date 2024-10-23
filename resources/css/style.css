@@ -80,27 +80,3 @@ body {
     box-shadow: none;
   }
 }
-
-.popup {
-  position: fixed; /* Fixiert das Popup am Bildschirmrand */
-  top: 50%;
-  left: 50%;
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Zentriert das Popup horizontal und vertikal */
-  background-color: #f8f9fa; /* Hellgrauer Hintergrund */
-  padding: 20px;
-  border-radius: 5px; /* Abgerundete Ecken */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Schlagschatten */
-  z-index: 1000; /* Stellt sicher, dass das Popup über anderen Elementen liegt */
-  display: none; /* Versteckt das Popup initial */
-  text-align: center; /* Zentriert den Text im Popup */
-}
-
-.popup img {
-  /* CSS-Regeln für das Bild im Popup */
-  max-width: 100%; /* Bild skalieren, damit es in das Popup passt */
-  height: auto; /* Höhe automatisch anpassen */
-  border-radius: 5px; /* Abgerundete Ecken für das Bild (optional) */
-}

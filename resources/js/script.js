@@ -1,7 +1,7 @@
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
     navigator.serviceWorker
-      .register("./service-worker.js")
+      .register("./resources/js/service-worker.js")
       .then(function (registration) {
         console.log("Service Worker registriert:", registration);
       })
@@ -21,6 +21,5 @@ function playAudio(filename) {
     })
     .catch((error) => {
       console.error("Fehler beim Laden des Sounds:", error);
-      // Hier kannst du eine Fehlermeldung anzeigen oder einen Fallback einrichten
     });
 }
