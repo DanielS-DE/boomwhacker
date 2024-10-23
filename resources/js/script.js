@@ -1,53 +1,26 @@
-var played = [];
-
-const alleMeineEntchen = [
-  "./resources/sounds/SOUND_C.mp3",
-  "./resources/sounds/SOUND_D.mp3",
-  "./resources/sounds/SOUND_E.mp3",
-  "./resources/sounds/SOUND_F.mp3",
-  "./resources/sounds/SOUND_G.mp3",
-  "./resources/sounds/SOUND_G.mp3",
-  "./resources/sounds/SOUND_A.mp3",
-  "./resources/sounds/SOUND_A.mp3",
-  "./resources/sounds/SOUND_A.mp3",
-  "./resources/sounds/SOUND_A.mp3",
-  "./resources/sounds/SOUND_G.mp3",
-  "./resources/sounds/SOUND_A.mp3",
-  "./resources/sounds/SOUND_A.mp3",
-  "./resources/sounds/SOUND_A.mp3",
-  "./resources/sounds/SOUND_A.mp3",
-  "./resources/sounds/SOUND_G.mp3",
-  "./resources/sounds/SOUND_F.mp3",
-  "./resources/sounds/SOUND_F.mp3",
-  "./resources/sounds/SOUND_F.mp3",
-  "./resources/sounds/SOUND_F.mp3",
-  "./resources/sounds/SOUND_E.mp3",
-  "./resources/sounds/SOUND_E.mp3",
-  "./resources/sounds/SOUND_D.mp3",
-  "./resources/sounds/SOUND_D.mp3",
-  "./resources/sounds/SOUND_D.mp3",
-  "./resources/sounds/SOUND_D.mp3",
-  "./resources/sounds/SOUND_C.mp3",
-];
-
-function playAudio(filename) {
-  let audio = new Audio(filename);
-  audio.play();
-  played.push(filename);
-  if (played.length >= 27) {
-    easterEgg(played);
-  }
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker
+      .register("./service-worker.js")
+      .then(function (registration) {
+        console.log("Service Worker registriert:", registration);
+      })
+      .catch(function (error) {
+        console.log("Service Worker Registrierung fehlgeschlagen:", error);
+      });
+  });
 }
 
-function easterEgg(played) {
-  if (JSON.stringify(played) === JSON.stringify(alleMeineEntchen)) {
-    const popup = document.getElementById("popup");
-    popup.style.display = "block";
-
-    // Schließe das Popup nach 3 Sekunden
-    setTimeout(function () {
-      popup.style.display = "none";
-    }, 3000);
-  }
-  played.length = 0;
+function playAudio(filename) {
+  fetch(filename)
+    .then((response) => response.blob())
+    .then((blob) => {
+      var audioUrl = URL.createObjectURL(blob);
+      var audio = new Audio(audioUrl);
+      audio.play();
+    })
+    .catch((error) => {
+      console.error("Fehler beim Laden des Sounds:", error);
+      // Hier kannst du eine Fehlermeldung anzeigen oder einen Fallback einrichten
+    });
 }
